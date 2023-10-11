@@ -4,6 +4,7 @@ import {router} from "./routes/router";
 import store from "./store";
 import { authHeader } from "./services/auth-header";
 
+// @ts-ignore
 router.beforeEach((to, from, next) => {
   const requiresAuth = to.matched.some(record => record.meta.requiresAuth);
   console.log(requiresAuth)

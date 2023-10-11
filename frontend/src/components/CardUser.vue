@@ -115,6 +115,7 @@ export default defineComponent({
             ) {
                 try {
                     if (typeof this.$route.params.id === "string") {
+                        // @ts-ignore
                         await updateUser(this.$route.params.id, this.currentUser);
                         this.successMessage = "Guardado con éxito";
                         this.$router.push('/home');

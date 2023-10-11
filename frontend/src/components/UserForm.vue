@@ -50,7 +50,6 @@
 import { defineComponent, ref, computed, Ref } from "vue";
 import { Form, Field, ErrorMessage, FormActions } from "vee-validate";
 import * as yup from "yup";
-import { getUsers } from "../services/userServices";
 
 export default defineComponent({
   name: "UserForm",
@@ -108,6 +107,7 @@ export default defineComponent({
 
     // Variable calculada para verificar si el usuario está autenticado
     const loggedIn = computed(() => {
+      // @ts-ignore
       return this.$store.state.auth.status.loggedIn;
     });
 
@@ -118,6 +118,7 @@ export default defineComponent({
       loading.value = true;
 
       try {
+        // @ts-ignore
         const data = await this.$store.dispatch("auth/register", user);
         if (data && data.msg) {
           message.value = data.msg;

@@ -122,14 +122,14 @@ export default defineComponent({
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 80vh;
+  height: 100vh;
 }
 
 .card-container {
   min-width: 300px;
   max-width: 360px;
   width: 50%;
-  height: 50vh;
+  min-height: 50vh;
   margin: 1em auto;
   border-radius: 30px;
   box-shadow: 0 0 2em #e6e9f9;
