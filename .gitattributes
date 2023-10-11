@@ -1,0 +1,6 @@
+# En el archivo .gitattributes
+* text=auto
+
+# Excluir archivos binarios
+*.png binary
+*.jpg binary
