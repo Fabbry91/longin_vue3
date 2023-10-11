@@ -6,8 +6,7 @@ import { authHeader } from "./services/auth-header";
 
 // @ts-ignore
 router.beforeEach((to, from, next) => {
-  const requiresAuth = to.matched.some(record => record.meta.requiresAuth);
-  console.log(requiresAuth)
+  const requiresAuth = to.matched.some(record => record.meta.requiresAuth);  
   if (requiresAuth && !authHeader()) {
     next('/login'); // Redirige a la página de inicio de sesión si no está autenticado
   } else {

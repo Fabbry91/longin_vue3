@@ -21,7 +21,7 @@
           {{ user.about_me }}
         </div>
         <div class="container-buttons">
-          <button class="btn btn-warning btn-sm mr-2" @click="this.$router.push(`/user/${user.id}`)">Editar</button>
+          <button class="btn btn-warning btn-sm mr-2" @click="$router.push(`/user/${user.id}`)">Editar</button>
           <button class="btn btn-danger btn-sm" @click="selectedUser = user" data-bs-toggle="modal"
             data-bs-target="#exampleModal">Eliminar</button>
         </div>
