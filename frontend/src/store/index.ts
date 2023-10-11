@@ -1,3 +1,4 @@
+// @ts-ignore
 import { createStore } from "vuex";
 import { auth } from "./auth.modules";
 import { Store } from "vuex/types/index.js";

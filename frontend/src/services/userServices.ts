@@ -1,5 +1,4 @@
 import { User } from "../interfaces/User";
-import { authHeader } from "./auth-header";
 import axios  from "./config"
 import { AxiosResponse } from "axios";
 
@@ -23,7 +22,7 @@ export const getUsers = async():Promise<AxiosResponse>=> await axios.get('/users
 export const getUser = async( id: string):Promise<AxiosResponse>=>  {
   return await axios.get(`/users/${id}`);
 }
-export const updateUser = async( id: any, user:User):Promise<AxiosResponse>=> {
+export const updateUser = async( id: any, user:any):Promise<AxiosResponse>=> {
   const userTem : any={
     ...user
   }
