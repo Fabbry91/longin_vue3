@@ -1,4 +1,4 @@
-CREATE DATABASE workanda;
+CREATE DATABASE database: 'workanda',;
 
 CREATE TABLE users(
     id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,

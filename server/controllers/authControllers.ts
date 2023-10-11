@@ -7,7 +7,6 @@ import { generteToken } from '../helper/jwt';
 export const registerUser = async (req: Request, res: Response) => {
     const { email, password } = req.body;
     try {
-
         const conn = await connect()
 
         //verifica la existencia del usuario

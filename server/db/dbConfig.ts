@@ -3,12 +3,11 @@ import {createPool} from 'mysql2/promise'
 
 export  const  connect = async () => {
     const connection = await createPool({
-        host: process.env.DB_HOST || 'localhost',
-        user: process.env.DB_USERNAME ||'root',
-        password: process.env.PASSWORD || "",
-        database: process.env.DB_NAME || 'workanda',
+        host: process.env.MYSQL_ADDON_HOST || 'localhost',
+        user: process.env.MYSQL_ADDON_USER || 'root',
+        password: process.env.MYSQL_ADDON_PASSWORD || '',
+        database: process.env.MYSQL_ADDON_DB || 'workanda',
         connectionLimit:10
     })
-
     return connection
 }
