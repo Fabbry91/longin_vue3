@@ -28,3 +28,9 @@ export default defineComponent({
   },
 });
 </script>
+
+<style scope>
+.row{
+  max-width: 100%;
+}
+</style>
